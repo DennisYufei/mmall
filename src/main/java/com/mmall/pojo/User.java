@@ -2,26 +2,21 @@ package com.mmall.pojo;
 
 import java.util.Date;
 
+/**
+ * 用户实体类
+ */
 public class User {
-    private Integer id;
 
-    private String username;
-
-    private String password;
-
-    private String email;
-
-    private String phone;
-
-    private String question;
-
-    private String answer;
-
-    private Integer role;
-
-    private Date createTime;
-
-    private Date updateTime;
+    private Integer id;     //用户id
+    private String username;//用户名
+    private String password;//用户密码，MD5加密
+    private String email;   //电邮
+    private String phone;   //电话
+    private String question;//找回密码问题
+    private String answer;  //找回密码答案
+    private Integer role;   //角色 ：0-管理员  1-普通用户
+    private Date createTime;//创建时间
+    private Date updateTime;//最后一次更新时间
 
     public User(Integer id, String username, String password, String email, String phone, String question, String answer, Integer role, Date createTime, Date updateTime) {
         this.id = id;
