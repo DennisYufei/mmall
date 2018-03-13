@@ -72,7 +72,7 @@ public class UserServiceImpl implements IUserService {
     }
 
     /**
-     * 检查用户名是否有效
+     * 检查用户名和Email是否有效
      */
     public ServerResponse<String> checkValid(String str, String type) {
         if (org.apache.commons.lang3.StringUtils.isNotBlank(type)) {
@@ -107,7 +107,7 @@ public class UserServiceImpl implements IUserService {
         if (StringUtils.isNotBlank(question)) {
             return ServerResponse.createBySuccess(question);
         }
-        return ServerResponse.createByErrorMessage("找回密码的问题是空的");
+        return ServerResponse.createByErrorMessage("该用户未设置找回密码问题");
     }
 
     /**
