@@ -6,6 +6,7 @@
 
   <display-name>Archetype Created Web Application</display-name>
 
+  <!--过滤器配置，转码成utf-8，拦截所有请求-->
   <filter>
     <filter-name>characterEncodingFilter</filter-name>
     <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -23,11 +24,12 @@
     <url-pattern>/*</url-pattern>
   </filter-mapping>
 
-
+  <!--WEB容器启动和关闭监听器-->
   <listener>
     <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
   </listener>
 
+  <!--web容器和spring容器整合监听器-->
   <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
@@ -38,6 +40,7 @@
     </param-value>
   </context-param>
 
+  <!--springMVC拦截-->
   <servlet>
     <servlet-name>dispatcher</servlet-name>
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
